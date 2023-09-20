@@ -9,7 +9,7 @@ public class FarmAnimalTest {
     private FarmAnimal farmAnimal;
     @Before
     public void before() {
-        farmAnimal = new Horse();
+        farmAnimal = new Horse("palomino");
     }
 
     @Test
@@ -19,11 +19,11 @@ public class FarmAnimalTest {
 
     @Test
     public void canIntroduceSelf() {
-        assertEquals("Hi, I'm a horse", farmAnimal.introduceSelf());
+        assertEquals("Hi, I am a horse from palomino family, neigh neigh", farmAnimal.introduceSelf());
     }
 
     @Test
     public void canMakeNoise() {
-        assertEquals("Neigh", farmAnimal.makeNoise());
+        assertEquals("neigh", farmAnimal.makeNoise());
     }
 }

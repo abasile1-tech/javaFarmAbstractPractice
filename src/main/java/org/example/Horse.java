@@ -1,9 +1,23 @@
 package org.example;
 
-//in constructor, make species ‘horse’
-//        a breed e.g. pony
-//        a getter for the breed
-//        an implementation of the makeANoise which returns an appropriate String (eg. neigh)
-//        override of introduceYourself returning 'Hi, I am a horse from pony family, neigh neigh'. Note that species, noise and breed should come from variable.
-public class Horse {
+public class Horse extends FarmAnimal{
+    private String breed;
+
+    public Horse(String breed) {
+        super("horse");
+        this.breed = breed;
+    }
+
+    @Override
+    public String makeNoise() {
+        return "neigh";
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public String introduceSelf() {
+        return "Hi, I am a " + this.getSpecies() + " from " + this.breed + " family, " + this.makeNoise() + " " + this.makeNoise();
+    }
 }
